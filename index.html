@@ -199,7 +199,7 @@
 <script>
 const C = {
   es: {
-    nav: ["inicio","educación","experiencia","escritura","arqueología web","libros libros libros","links"],
+    nav: ["inicio","educación","intereses","experiencia","escritura","proyectos","arqueología","links"],
     s: [
       {
         e: "🌵", title: "inicio",
@@ -214,7 +214,7 @@ const C = {
 </div>`
       },
       {
-        e: "📚", title: "educación",
+        e: "🎨", title: "educación",
         body: `<p>
   <span class="edu-entry"><a href="#">MA Internet Equalities</a> — Creative Computing Institute, UAL · Londres, 2025–2026</span>
   <span class="edu-entry"><a href="#">Ingeniería Industrial y Sistemas de Mejoramiento Ambiental</a> — Universidad Panamericana · México, 2017-2022</span>
@@ -222,22 +222,39 @@ const C = {
 </p>`
       },
       {
-        e: "💼", title: "experiencia profesional",
-        body: `<p>Mi trayectoria va de startups en el área de pagos digitales (primeros años de Fintech en México) a Sector Público en programas de inversión en tecnología y desarrollo sustentable a empresa global de tecnología. En esta última, pasé cinco años asesorando a instituciones públicas, privadas y de educación en adopción, ejecución y renovación de tecnologías como parte de Microsoft LATAM. Ahora en el cruce entre política, gobernanza de IA y academia.</p>
+        e: "👁️", title: "intereses actuales",
+        body: `<p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, y en la ausencia más amplia de una política del cuidado en el internet: 
+          infraestructura, protocolos, bases de datos, plataformas y UX/UI. Los archivos coloniales digitales son mi sitio de indagación actual, pero me interesa cómo este patrón se repite a lo largo de los sistemas digitales que construimos hoy. 
+          Me atraen la ética del cuidado, la hauntología y la fabulación crítica como formas de mapear los futuros que han quedado fuera y las posibilidades pendientes de abrazar. Esto se suma a mi interés en el ciberfeminismo, 
+          la gobernanza de internet, y cómo se construyen y disputan la raza, la identidad y la visibilidad. En el contexto mexicano específicamente y en marcos más amplios como el afropesimismo y el aceleracionismo. Me muevo entre registros: 
+          por un lado la lectura y la teoría, por otro el trabajo digital práctico y curatorial (contra-archivos, mapas interactivos, interfaces especulativas) y la escritura editorial bilingüe. Cableado, mi newsletter sobre tecnología feminista 
+          y cultura digital latinoamericana, es donde intento hacer todo esto converger.</p>`
+      },
+      {
+        e: "🚥", title: "experiencia profesional",
+        body: `<p>Mi trayectoria va de startups en el área de pagos digitales (primeros años de Fintech en México) a Sector Público en programas de inversión en tecnología y desarrollo sustentable a empresa global de tecnología. En esta última, pasé cinco años asesorando a instituciones públicas, privadas y de educación en adopción, ejecución y renovación de tecnologías como parte de Microsoft LATAM. Ahora en el cruce entre tecnología feminista, política de cuidados y memoria cultural.</p>
 <p><a href="https://www.linkedin.com/in/sbernalm97">→ perfil completo en LinkedIn</a></p>`
       },
       {
-        e: "✍️", title: "escritura",
+        e: "🪑", title: "escritura",
         body: `<ul>
   <li><a href="https://cableado.substack.com">Cableado</a> — newsletter bilingüe sobre tecnología, ciberfeminismo, política y ficción especulativa con foco latinoamericano</li>
-  <li><a href="#">Las mil y una noches</a> — sinopsis y texto de sala para la adaptación de Las Mil y Una Noches a una versión de ficción entre un científico y sus robots, del Creative Computing Institute <span class="tag tp">en proceso</span></li>
+  <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">Las 1 0 0 1 noches</a> — sinopsis y texto de sala para la adaptación de Las Mil y Una Noches a una versión de ficción entre un científico y sus robots, del Creative Computing Institute</li>
   <li><a href="#">Libro de cuentos de ficción especulativa</a> — bordes entre lo humano y lo no-humano <span class="tag tb">en proceso</span></li>
 </ul>`
+      },
+      {
+        e: "🛼", title: "proyectos web",
+        body: `<ul>
+  <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas de Cuidado</a> — El cuidado ha sido históricamente relegado a lo doméstico, lo emocional y lo femenino, un condicionamiento que ha dejado poco espacio para que el trabajo de cuidado sea reconocido como una fuerza de reproducción social. Este Atlas intenta hacer posible ese reconocimiento.</li>
+  </ul>`
       },
       {
         e: "🦴", title: "arqueología web",
         body: `<p>Hipervínculos a textos con mi nombre esparcidos por la web. </p><ul>
   <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026 </li>
+  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026 </li>
+  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026 </li>
   <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
   <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
   <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
@@ -246,17 +263,9 @@ const C = {
 
       },
       {
-        e: "📖", title: "libros libros libros",
-        body: `<ul>
-  <li><a href="https://www.goodreads.com/user/show/201196173-sofia-s-recs">Goodreads</a> — listas curadas sobre tecnología, feminismo, infraestructura y teoría crítica</li>
-  <li><a href="https://github.com">Biblioteca personal en casa</a> — código abierto para sistema de administración de libros para tu propia colección <span class="tag tp">en proceso</span></li>
-</ul>`
-      },
-      {
-        e: "🔗", title: "links",
+        e: "🪅", title: "links",
         body: `<ul>
   <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
-  <li><a href="https://www.goodreads.com/user/show/201196173-sofia-s-recs">goodreads</a></li>
   <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
   <li><a href="https://cableado.substack.com">substack · cableado</a></li>
 </ul>`
@@ -266,7 +275,7 @@ const C = {
   },
 
   en: {
-    nav: ["home","education","experience","writing","web archaeology","books books books","links"],
+    nav: ["home","education","interests","experience","writing","projects","archaeology","links"],
     s: [
       {
         e: "🌵", title: "home",
@@ -281,7 +290,7 @@ const C = {
 </div>`
       },
       {
-        e: "📚", title: "education",
+        e: "🎨", title: "education",
         body: `<p>
   <span class="edu-entry"><a href="#">MA Internet Equalities</a> — Creative Computing Institute, UAL · London, 2025–2026</span>
   <span class="edu-entry"><a href="#">Industrial Engineering &amp; Environmental Improvement Systems</a> — Universidad Panamericana · Mexico, 2017-2022</span>
@@ -289,22 +298,39 @@ const C = {
 </p>`
       },
       {
-        e: "💼", title: "professional experience",
-        body: `<p>My path runs from startups in digital payments (the early years of fintech in Mexico) to public sector programmes in technology investment and sustainable development, to global tech. In the latter, I spent five years advising public, private and education sector institutions on the adoption, implementation and renewal of technologies as part of Microsoft LATAM. Now at the intersection of policy, AI governance and research.</p>
+        e: "👁️", title: "current interests",
+        body: `<p>My current work centers on the invisibilization of care labour, particularly feminized care, and the broader absence of a politics of care across the internet's full stack: 
+          infrastructure, protocols, databases, platforms, and UX/UI. Digital colonial archives are my current site of inquiry, but I'm interested in how the pattern repeats throughout 
+          the digital systems we build today. I'm drawn to care ethics, hauntology and critical fabulation as a way of mapping the futures that have been left out and the possibilities that are yet to be embraced. 
+          This sits alongside a longer-running interest in cyberfeminism and internet governance, and in how race, identity, and visibility get constructed and contested, in Mexico specifically and in broader 
+          frameworks like afropessimism and accelerationism. I move between registers: close reading and theory on one side, practice-based and curatorial digital work (counter-archives, interactive maps, 
+          speculative interfaces) and bilingual editorial writing on the other. Cableado, my newsletter on feminist technology and Latin American digital culture, is where a lot of this comes together for a wider audience.</p>`
+      },
+      {
+        e: "🚥", title: "professional experience",
+        body: `<p>My path runs from startups in digital payments (the early years of fintech in Mexico) to public sector programmes in technology investment and sustainable development, to global tech. In the latter, I spent five years advising public, private and education sector institutions on the adoption, implementation and renewal of technologies as part of Microsoft LATAM. Now at the intersection of feminist technology, politics of care, and cultural memory.</p>
 <p><a href="https://www.linkedin.com/in/sbernalm97">→ full profile on LinkedIn</a></p>`
       },
       {
-        e: "✍️", title: "writing",
+        e: "🪑", title: "writing",
         body: `<ul>
   <li><a href="https://cableado.substack.com">Cableado</a> — bilingual newsletter on technology, feminist theory, politics and speculative fiction with a Latin American focus</li>
-  <li><a href="#">One thousand and one nights</a> — synopsis and programme note for an adaptation of One Thousand and One Nights reimagined as a fiction between a scientist and their robots, at the Creative Computing Institute work in progress <span class="tag tp">work in progress</span> </li>
-  <li><a href="#">Short story collection of speculative fiction </a> — borders between the human and the non-human work in progress<span class="tag tb">work in progress</span></li>
+  <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">One thousand and one nights</a> — synopsis and programme note for an adaptation of One Thousand and One Nights reimagined as a fiction between a scientist and their robots, at the Creative Computing Institute work in progress</li>
+  <li><a href="#">Short story collection of speculative fiction </a> — borders between the human and the non-human <span class="tag tb">work in progress</span></li>
 </ul>`
+      },
+      {
+        e: "🛼", title: "web project",
+        body: `<ul>
+  <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas of Care</a> — Care has historically been relegated to the domestic, the emotional, and the feminine, a conditioning that has left little room for caregiving to be recognized as a force of social reproduction. This Atlas aims to make that recognition possible.</li>
+  </ul>`
       },
       {
         e: "🦴", title: "web archaeology",
         body: `<p>Links to texts with my name spread across the web.</p>
   <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026 </li>
+  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026 </li>
+  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026 </li>
   <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
   <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
   <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
@@ -312,17 +338,9 @@ const C = {
 </ul>` 
       },
       {
-        e: "📖", title: "books books books",
-        body: `<ul>
-  <li><a href="https://www.goodreads.com/user/show/201196173-sofia-s-recs">Goodreads</a> — curated lists on technology, feminism, infrastructure and critical theory</li>
-  <li><a href="https://github.com">Personal home library</a> — open source code for your personal book collection management system <span class="tag tp">work in progress</span></li>
-</ul>`
-      },
-      {
-        e: "🔗", title: "links",
+        e: "🪅", title: "links",
         body: `<ul>
   <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
-  <li><a href="https://www.goodreads.com/user/show/201196173-sofia-s-recs">goodreads</a></li>
   <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
   <li><a href="https://cableado.substack.com">substack · cableado</a></li>
 </ul>`
