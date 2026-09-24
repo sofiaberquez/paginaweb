@@ -3,19 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofia Berquez</title>
+  <title>Sofia Bernal (Berquez) | política digital y tecnología responsable</title>
+  <meta name="description" content="Sofia Bernal (Berquez): política digital, tecnología responsable y gobernanza de internet desde América Latina. MA Internet Equalities (UAL CCI), 5 años en Microsoft LATAM, autora de Cableado.">
+  <meta name="author" content="Sofia Bernal">
+  <link rel="canonical" href="https://sofiaberquez.com/">
+
+  <!-- vista previa al compartir el link (LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sofiaberquez.com/">
+  <meta property="og:title" content="Sofia Bernal (Berquez) | digital policy & responsible technology">
+  <meta property="og:description" content="Digital policy, responsible technology and internet governance from Latin America. MA Internet Equalities (UAL CCI), 5 years at Microsoft LATAM, writer of Cableado.">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary">
+
+  <!-- ayuda a Google a entender que Bernal y Berquez son la misma persona -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sofia Bernal",
+    "alternateName": "Sofia Berquez",
+    "url": "https://sofiaberquez.com/",
+    "email": "mailto:sofiaberquez@outlook.com",
+    "jobTitle": "Digital policy & responsible technology",
+    "alumniOf": ["University of the Arts London, Creative Computing Institute", "Universidad Nacional Autónoma de México", "Universidad Panamericana"],
+    "sameAs": ["https://www.linkedin.com/in/sbernalm97", "https://cableado.substack.com"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
     body {
       font-family: 'Noto Sans', sans-serif;
       font-size: 14px;
       line-height: 1.75;
       color: #111;
-      background: #fdf6d8;
+      background-color: #ddd7cf;
+    }
+
+    /* papel arrugado: capa fija detrás de todo (funciona también en celular) */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: #ddd7cf url("paper_background.jpg") center / cover no-repeat;
     }
 
     .page {
@@ -23,6 +63,8 @@
       margin: 0 auto;
       padding: 2.5rem 1.5rem 4rem;
     }
+
+    [hidden] { display: none !important; }
 
     /* --- topbar --- */
     .topbar {
@@ -34,79 +76,70 @@
 
     .site-name {
       font-size: 13px;
+      font-weight: 600;
       color: #0a0a6e;
     }
 
-    .lang-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0;
-    }
+    .lang-wrap { display: flex; align-items: center; }
 
     .lb {
       background: none;
       border: none;
       font-family: 'Noto Sans', sans-serif;
       font-size: 13px;
-      color: #e0609a;
+      color: #b8336f;
       cursor: pointer;
       padding: 0 5px;
-      opacity: 0.4;
+      opacity: 0.55;
     }
 
     .lb.on {
       opacity: 1;
       text-decoration: underline;
-      text-decoration-color: #f4a8c8;
+      text-decoration-color: #e0609a;
       text-underline-offset: 3px;
     }
 
-    .lb-sep {
-      font-size: 13px;
-      color: #f4a8c8;
-    }
+    .lb-sep { font-size: 13px; color: #d97fa8; }
 
     /* --- nav --- */
     nav {
       margin-bottom: 2.4rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0;
+      row-gap: 0.2rem;
     }
 
     nav a {
       font-size: 13px;
-      color: #e0609a;
+      color: #b8336f;
       text-decoration: none;
       margin-right: 1.1rem;
-      border-bottom: 1.5px solid #f9d0e3;
+      border-bottom: 1.5px solid #e9a3c3;
     }
 
-    nav a:hover {
-      border-bottom-color: #e0609a;
-    }
+    nav a:hover { border-bottom-color: #b8336f; }
 
     /* --- links --- */
     a {
       color: #111;
       text-decoration: underline;
-      text-decoration-color: #f4a8c8;
+      text-decoration-color: #e0609a;
       text-underline-offset: 3px;
     }
 
-    a:hover {
-      text-decoration-color: #e0609a;
+    a:hover { text-decoration-color: #b8336f; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #0a0a6e;
+      outline-offset: 2px;
+      border-radius: 2px;
     }
 
     /* --- sections --- */
-    .sec {
-      margin-bottom: 0;
-    }
+    .sec { scroll-margin-top: 1.5rem; }
 
-    .sec-emoji {
-      font-size: 22px;
-      margin-bottom: 0.4rem;
-    }
+    .sec-emoji { font-size: 22px; margin-bottom: 0.4rem; }
 
     .sec-title {
       font-size: 15px;
@@ -118,62 +151,38 @@
 
     .sec-divider {
       text-align: center;
-      font-size: 16px;
-      color: #f4a8c8;
+      font-size: 18px;
+      color: #b8336f;
       margin: 2rem 0 1.8rem;
       letter-spacing: 0.3em;
     }
 
-    p {
-      margin-bottom: 0.75rem;
-      font-size: 14px;
-    }
+    p { margin-bottom: 0.75rem; font-size: 14px; }
 
-    ul {
-      padding-left: 1.2rem;
-      margin-bottom: 0.75rem;
-    }
+    ul { padding-left: 1.2rem; margin-bottom: 0.75rem; }
 
-    ul li {
-      margin-bottom: 0.35rem;
-      font-size: 14px;
-    }
+    ul li { margin-bottom: 0.35rem; font-size: 14px; }
+
+    ul ul { margin-top: 0.3rem; margin-bottom: 0.2rem; }
+
+    .lede { color: #0a0a6e; font-style: italic; }
 
     /* --- tags --- */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 0.9rem;
-    }
-
-    .tag {
-      font-size: 12px;
-      padding: 3px 11px;
-      border-radius: 20px;
-    }
-
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.9rem; }
+    .tag { font-size: 12px; padding: 3px 11px; border-radius: 20px; }
     .tb { background: #dde8ff; color: #0c447c; }
     .tp { background: #fde0ec; color: #8c2252; }
     .ty { background: #fff3b0; color: #5a4700; }
 
-    /* --- edu entries --- */
-    .edu-entry {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
+    .edu-entry { display: block; margin-bottom: 0.5rem; }
 
-    .wip {
-      font-style: italic;
-      font-size: 13px;
-      color: #888;
-    }
+    .cv-link { font-weight: 600; }
 
     /* --- footer --- */
     .footer {
       margin-top: 3rem;
       font-size: 12px;
-      color: #bbb;
+      color: #5f5850;
       font-style: italic;
     }
   </style>
@@ -182,212 +191,313 @@
 <div class="page">
 
   <div class="topbar">
-    <span class="site-name">sofiaberquez.com</span>
+    <h1 class="site-name">Sofia Bernal</h1>
     <span class="lang-wrap">
-      <button class="lb on" id="bes" onclick="L('es')">es</button>
+      <button class="lb on" id="bes" type="button" aria-pressed="true" onclick="L('es')">es</button>
       <span class="lb-sep">/</span>
-      <button class="lb" id="ben" onclick="L('en')">en</button>
+      <button class="lb" id="ben" type="button" aria-pressed="false" onclick="L('en')">en</button>
     </span>
   </div>
 
-  <nav id="nav"></nav>
-  <div id="body"></div>
-  <div class="footer" id="foot"></div>
+  <!-- ===================== ESPAÑOL ===================== -->
+  <div data-lang="es" lang="es">
+
+    <nav aria-label="Secciones">
+      <a href="#inicio">inicio</a>
+      <a href="#educacion">educación</a>
+      <a href="#intereses">intereses</a>
+      <a href="#experiencia">experiencia</a>
+      <a href="#escritura">escritura</a>
+      <a href="#charlas">charlas</a>
+      <a href="#proyectos">proyectos</a>
+      <a href="#arqueologia">arqueología</a>
+      <a href="#contacto">contacto</a>
+    </nav>
+
+    <section class="sec" id="inicio">
+      <div class="sec-emoji">🌵</div>
+      <h2 class="sec-title">inicio</h2>
+      <p>Escribo y pienso sobre tecnología, política y feminismo desde una perspectiva latinoamericana. Me interesa lo que los sistemas digitales hacen con los cuerpos, los archivos y las posibilidades de organización colectiva.</p>
+      <p>Busco trabajar en política digital y tecnología responsable: en el cruce entre instituciones, comunidades y educación, ayudando a que la tecnología se construya a favor de las personas.</p>
+      <p>Actualmente en Londres, terminando la maestría en Internet Equalities en el Creative Computing Institute, UAL. De regreso pronto a la Ciudad de México.</p>
+      <div class="tags">
+        <span class="tag tb">gobernanza de IA</span>
+        <span class="tag tp">ciberfeminismo</span>
+        <span class="tag ty">política digital</span>
+        <span class="tag tb">tecnología responsable</span>
+        <span class="tag tp">estudios de internet</span>
+        <span class="tag ty">América Latina</span>
+      </div>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="educacion">
+      <div class="sec-emoji">🎨</div>
+      <h2 class="sec-title">educación y certificaciones</h2>
+      <p>
+        <span class="edu-entry"><strong>MA Internet Equalities</strong> — Creative Computing Institute, UAL · Londres, 2025–2026</span>
+        <span class="edu-entry"><strong>Ingeniería Industrial y Gestión de la Innovación</strong> — Universidad Panamericana, con intercambio en Korea University · México, 2017–2022</span>
+        <span class="edu-entry"><strong>Licenciatura en Sociología</strong> con año de vinculación comunitaria en el Museo Nacional de los Pueblos Indígenas — UNAM · México, 2018–2023</span>
+        <span class="edu-entry"><strong>Gobernanza de Internet</strong> (certificado) — Internet Society, 2026</span>
+      </p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="intereses">
+      <div class="sec-emoji">👁️</div>
+      <h2 class="sec-title">intereses actuales</h2>
+      <p class="lede">En corto: me interesa cómo lo que documentamos, describimos y catalogamos decide lo que después se puede saber y recordar de las personas, y cómo construir tecnología en nuestro interés y no para ampliar brechas sociales ni el agotamiento de la naturaleza.</p>
+      <p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, y en la ausencia más amplia de una política del cuidado en el internet: infraestructura, protocolos, bases de datos, plataformas y UX/UI. Los archivos coloniales digitales son mi sitio de indagación actual, y noto cómo este patrón se repite en los sistemas digitales generales. Me atraen la ética del cuidado, la fantología y la fabulación crítica como formas de mapear los futuros que han quedado fuera y las posibilidades pendientes de abrazar. Me gusta leer, escribir y construir contra-archivos, mapas interactivos e interfaces especulativas. Soy y estoy en el ciberfeminismo, me apremia la gobernanza de internet y el cómo se construye y disputa la raza, la identidad y la visibilidad, en general y en lo particular del contexto latinoamericano. Indago en la tecnología educativa y lo que se vuelve legible o invisible cuando el cuidado y el aprendizaje se diseñan dentro de un sistema encapsulado. Compro libros por vocación.</p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="experiencia">
+      <div class="sec-emoji">🚥</div>
+      <h2 class="sec-title">experiencia profesional</h2>
+      <p>Mi trayectoria va de startups de pagos digitales (los primeros años del fintech en México), a programas de inversión en tecnología y desarrollo sustentable en el sector público, a una empresa global de tecnología.</p>
+      <p>En Microsoft LATAM pasé cinco años gobernando acuerdos complejos de tecnología con gobiernos, universidades e instituciones financieras reguladas en México, Argentina, Uruguay y Chile, junto a equipos legales, de cumplimiento y finanzas. Ahí también cofundé el pilar indígena de los grupos de empleados de Microsoft México, con el que organicé un evento conjunto con el Museo del INPI, y fui Sustainability Champion de Microsoft México.</p>
+      <p>Ahora en el cruce entre tecnología feminista, política de cuidados y memoria cultural.</p>
+      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">descarga mi CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">perfil completo en LinkedIn</a></p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="escritura">
+      <div class="sec-emoji">🪑</div>
+      <h2 class="sec-title">escritura</h2>
+      <ul>
+        <li><a href="https://cableado.substack.com">Cableado</a> — newsletter bilingüe sobre tecnología, ciberfeminismo, política y ficción especulativa con foco latinoamericano. Algunas piezas:
+          <ul>
+            <!-- CAMBIA estos href por el link directo de cada artículo -->
+            <li><a href="https://cableado.substack.com">Culturas de datos públicas</a> — ensayo compartido por Jonathan Gray, cuyo trabajo discute</li>
+            <li><a href="https://cableado.substack.com">La reforma de datos personales y la desaparición del INAI</a> — análisis de la nueva LFPDPPP y los casos Pegasus</li>
+          </ul>
+        </li>
+        <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">Las 1 0 0 1 noches</a> — sinopsis y texto de sala para la adaptación de Las Mil y Una Noches a una ficción entre un científico y sus robots, del Creative Computing Institute</li>
+        <li>Libro de cuentos de ficción especulativa — bordes entre lo humano y lo no-humano <span class="tag tb">en proceso</span></li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="charlas">
+      <div class="sec-emoji">🎙️</div>
+      <h2 class="sec-title">charlas y eventos</h2>
+      <ul>
+        <li>Diálogo público y podcast con Erdem Ovacik, autor de <em>The Next Democracy</em> — anfitriona y moderadora por el MA Internet Equalities, UAL</li>
+        <li>Marco ético para una performance pública de robótica basada en Las Mil y Una Noches — International Conference on Social Robotics</li>
+        <li>Evento conjunto Microsoft × Museo del INPI — organizado desde el pilar indígena de Microsoft México</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="proyectos">
+      <div class="sec-emoji">🛼</div>
+      <h2 class="sec-title">proyectos web</h2>
+      <ul>
+        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas de Cuidado</a> — El cuidado ha sido históricamente relegado a lo doméstico, lo emocional y lo femenino, un condicionamiento que ha dejado poco espacio para que el trabajo de cuidado sea reconocido como una fuerza de reproducción social. Este Atlas intenta hacer posible ese reconocimiento.</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="arqueologia">
+      <div class="sec-emoji">🦴</div>
+      <h2 class="sec-title">arqueología web</h2>
+      <p>Hipervínculos a textos con mi nombre esparcidos por la web.</p>
+      <ul>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026</li>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026</li>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026</li>
+        <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="contacto">
+      <div class="sec-emoji">🪅</div>
+      <h2 class="sec-title">contacto y links</h2>
+      <p>¿Trabajas en política digital, tecnología responsable o educación en América Latina? Me encantaría conversar.</p>
+      <ul>
+        <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
+        <li><a href="https://cableado.substack.com">substack · cableado</a></li>
+        <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">hecho con html · sofiaberquez.com · cdmx / london</div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en" lang="en" hidden>
+
+    <nav aria-label="Sections">
+      <a href="#home">home</a>
+      <a href="#education">education</a>
+      <a href="#interests">interests</a>
+      <a href="#experience">experience</a>
+      <a href="#writing">writing</a>
+      <a href="#talks">talks</a>
+      <a href="#projects">projects</a>
+      <a href="#archaeology">archaeology</a>
+      <a href="#contact">contact</a>
+    </nav>
+
+    <section class="sec" id="home">
+      <div class="sec-emoji">🌵</div>
+      <h2 class="sec-title">home</h2>
+      <p>I write and think about technology, politics and feminism from a Latin American perspective. I'm interested in what digital systems do to bodies, archives and possibilities for collective organising.</p>
+      <p>I'm looking to work in digital policy and responsible technology: where institutions, communities and education meet, helping technology get built in people's best interests.</p>
+      <p>Currently in London, finishing an MA in Internet Equalities at the Creative Computing Institute, UAL. Heading back to Mexico City soon.</p>
+      <div class="tags">
+        <span class="tag tb">AI governance</span>
+        <span class="tag tp">cyberfeminism</span>
+        <span class="tag ty">digital policy</span>
+        <span class="tag tb">responsible technology</span>
+        <span class="tag tp">internet studies</span>
+        <span class="tag ty">Latin America</span>
+      </div>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="education">
+      <div class="sec-emoji">🎨</div>
+      <h2 class="sec-title">education &amp; certifications</h2>
+      <p>
+        <span class="edu-entry"><strong>MA Internet Equalities</strong> — Creative Computing Institute, UAL · London, 2025–2026</span>
+        <span class="edu-entry"><strong>BSc Industrial Engineering &amp; Innovation Management</strong> — Universidad Panamericana, with an exchange at Korea University · Mexico, 2017–2022</span>
+        <span class="edu-entry"><strong>BA Sociology</strong> with a year of community engagement at the National Museum of Indigenous Peoples — UNAM · Mexico, 2018–2023</span>
+        <span class="edu-entry"><strong>Internet Governance</strong> (certificate) — Internet Society, 2026</span>
+      </p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="interests">
+      <div class="sec-emoji">👁️</div>
+      <h2 class="sec-title">current interests</h2>
+      <p class="lede">In short: I'm interested in how what we document, describe and catalogue decides what can later be known and remembered about people, and in building technology in our best interests rather than deepening social divides and natural depletion.</p>
+      <p>My current work centres on the invisibilisation of care work, particularly feminised care, and on the broader absence of a politics of care on the internet: infrastructure, protocols, databases, platforms and UX/UI. Digital colonial archives are my current site of inquiry, and I notice how this pattern repeats itself across digital systems more generally. I'm drawn to care ethics, hauntology and critical fabulation as ways of mapping the futures that have been left out and the possibilities still waiting to be embraced. I like reading, writing, and building counter-archives, interactive maps and speculative interfaces. I am, and stand, in cyberfeminism; internet governance matters urgently to me, as does how race, identity and visibility are constructed and contested online — in general, and specifically within the Latin American context. I explore educational technology and what becomes legible or invisible when care and learning are designed within an enclosed system. I buy books as a calling.</p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="experience">
+      <div class="sec-emoji">🚥</div>
+      <h2 class="sec-title">professional experience</h2>
+      <p>My path runs from startups in digital payments (the early years of fintech in Mexico), to public-sector programmes in technology investment and sustainable development, to global tech.</p>
+      <p>At Microsoft LATAM I spent five years governing complex technology agreements with governments, universities and regulated financial institutions in Mexico, Argentina, Uruguay and Chile, working alongside legal, compliance and finance teams. There I also co-founded the Indigenous pillar of Microsoft Mexico's employee resource groups, through which I organised a joint event with the INPI Museum, and served as Microsoft Mexico's Sustainability Champion.</p>
+      <p>Now at the intersection of feminist technology, politics of care and cultural memory.</p>
+      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">download my CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">full profile on LinkedIn</a></p>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="writing">
+      <div class="sec-emoji">🪑</div>
+      <h2 class="sec-title">writing</h2>
+      <ul>
+        <li><a href="https://cableado.substack.com">Cableado</a> — bilingual newsletter on technology, feminist theory, politics and speculative fiction with a Latin American focus. Selected pieces:
+          <ul>
+            <!-- CHANGE these hrefs to each article's direct link -->
+            <li><a href="https://cableado.substack.com">Public data cultures</a> — essay shared by Jonathan Gray, whose work it discusses</li>
+            <li><a href="https://cableado.substack.com">Mexico's data-protection reform and the end of INAI</a> — analysis of the new LFPDPPP and the Pegasus cases</li>
+          </ul>
+        </li>
+        <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">One Thousand and One Nights</a> — synopsis and programme note for an adaptation of One Thousand and One Nights reimagined as a fiction between a scientist and their robots, at the Creative Computing Institute</li>
+        <li>Short story collection of speculative fiction — borders between the human and the non-human <span class="tag tb">work in progress</span></li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="talks">
+      <div class="sec-emoji">🎙️</div>
+      <h2 class="sec-title">talks &amp; events</h2>
+      <ul>
+        <li>Public dialogue and podcast with Erdem Ovacik, author of <em>The Next Democracy</em> — host and moderator for the MA Internet Equalities, UAL</li>
+        <li>Ethical framework for a public robotics performance based on One Thousand and One Nights — International Conference on Social Robotics</li>
+        <li>Joint event between Microsoft and the INPI Museum — organised through Microsoft Mexico's Indigenous pillar</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="projects">
+      <div class="sec-emoji">🛼</div>
+      <h2 class="sec-title">web projects</h2>
+      <ul>
+        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas of Care</a> — Care has historically been relegated to the domestic, the emotional, and the feminine, a conditioning that has left little room for caregiving to be recognized as a force of social reproduction. This Atlas aims to make that recognition possible.</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="archaeology">
+      <div class="sec-emoji">🦴</div>
+      <h2 class="sec-title">web archaeology</h2>
+      <p>Links to texts with my name spread across the web.</p>
+      <ul>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026</li>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026</li>
+        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026</li>
+        <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
+        <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
+      </ul>
+    </section>
+
+    <div class="sec-divider" aria-hidden="true">· · ·</div>
+
+    <section class="sec" id="contact">
+      <div class="sec-emoji">🪅</div>
+      <h2 class="sec-title">contact &amp; links</h2>
+      <p>Working in digital policy, responsible technology or education in Latin America? I'd love to talk.</p>
+      <ul>
+        <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
+        <li><a href="https://cableado.substack.com">substack · cableado</a></li>
+        <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">made with html · sofiaberquez.com · cdmx / london</div>
+  </div>
 
 </div>
 
 <script>
-const C = {
-  es: {
-    nav: ["inicio","educación","intereses","experiencia","escritura","proyectos","arqueología","links"],
-    s: [
-      {
-        e: "🌵", title: "inicio",
-        body: `<p>Escribo y pienso sobre tecnología, política y feminismo desde una perspectiva latinoamericana. Me interesa lo que los sistemas digitales hacen con los cuerpos, los archivos y las posibilidades de organización colectiva.</p>
-<p>Actualmente en Londres, estudiando Internet Equalities en el Creative Computing Institute, UAL.</p>
-<div class="tags">
-  <span class="tag tb">gobernanza de IA</span>
-  <span class="tag tp">ciberfeminismo</span>
-  <span class="tag ty">política digital</span>
-  <span class="tag tb">América Latina</span>
-  <span class="tag tp">estudios de internet</span>
-</div>`
-      },
-      {
-        e: "🎨", title: "educación",
-        body: `<p>
-  <span class="edu-entry"><a href="#">MA Internet Equalities</a> — Creative Computing Institute, UAL · Londres, 2025–2026</span>
-  <span class="edu-entry"><a href="#">Ingeniería Industrial y Sistemas de Mejoramiento Ambiental</a> — Universidad Panamericana · México, 2017-2022</span>
-  <span class="edu-entry"><a href="#">Licenciatura en Sociología</a> con año de vinculación comunitaria en el Museo Nacional de los Pueblos Indígenas — UNAM · México, 2018-2023</span>
-</p>`
-      },
-      {
-        e: "👁️", title: "intereses actuales",
-        body: `<p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, 
-          y en la ausencia más amplia de una política del cuidado en el internet: infraestructura, protocolos, bases de datos, plataformas
-          y UX/UI. Los archivos coloniales digitales son mi sitio de indagación actual, y noto cómo este patrón se repite en los sistemas
-          digitales generales. Me atraen la ética del cuidado, la fantología y la fabulación crítica como formas de mapear los futuros 
-          que han quedado fuera y las posibilidades pendientes de abrazar. Me gusta leer, escribir y construir contra-archivos, mapas interactivos e interfaces especulativas.
-          Soy y estoy en el ciberfeminismo, me apremia la gobernanza de internet y el cómo se construye y disputa la raza, la identidad y la 
-          visibilidad, en general y en lo particular del contexto latinoamericano. Indago en la tecnología educativa y lo que se vuelve legible o invisible cuando el cuidado y el aprendizaje se diseñan
-          dentro de un sistema encapsulado. Compro libros por vocación.</p>`
-      },
-      {
-        e: "🚥", title: "experiencia profesional",
-        body: `<p>Mi trayectoria va de startups en el área de pagos digitales (primeros años de Fintech en México) a Sector Público en programas de inversión en tecnología y desarrollo sustentable a empresa global de tecnología. En esta última, pasé cinco años asesorando a instituciones públicas, privadas y de educación en adopción, ejecución y renovación de tecnologías como parte de Microsoft LATAM. Ahora en el cruce entre tecnología feminista, política de cuidados y memoria cultural.</p>
-<p><a href="https://www.linkedin.com/in/sbernalm97">→ perfil completo en LinkedIn</a></p>`
-      },
-      {
-        e: "🪑", title: "escritura",
-        body: `<ul>
-  <li><a href="https://cableado.substack.com">Cableado</a> — newsletter bilingüe sobre tecnología, ciberfeminismo, política y ficción especulativa con foco latinoamericano</li>
-  <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">Las 1 0 0 1 noches</a> — sinopsis y texto de sala para la adaptación de Las Mil y Una Noches a una versión de ficción entre un científico y sus robots, del Creative Computing Institute</li>
-  <li><a href="#">Libro de cuentos de ficción especulativa</a> — bordes entre lo humano y lo no-humano <span class="tag tb">en proceso</span></li>
-</ul>`
-      },
-      {
-        e: "🛼", title: "proyectos web",
-        body: `<ul>
-  <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas de Cuidado</a> — El cuidado ha sido históricamente relegado a lo doméstico, lo emocional y lo femenino, un condicionamiento que ha dejado poco espacio para que el trabajo de cuidado sea reconocido como una fuerza de reproducción social. Este Atlas intenta hacer posible ese reconocimiento.</li>
-  </ul>`
-      },
-      {
-        e: "🦴", title: "arqueología web",
-        body: `<p>Hipervínculos a textos con mi nombre esparcidos por la web. </p><ul>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026 </li>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026 </li>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026 </li>
-  <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
-</ul>`       
-
-      },
-      {
-        e: "🪅", title: "links",
-        body: `<ul>
-  <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
-  <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
-  <li><a href="https://cableado.substack.com">substack · cableado</a></li>
-</ul>`
-      }
-    ],
-    foot: "hecho con html · cdmx / london"
-  },
-
-  en: {
-    nav: ["home","education","interests","experience","writing","projects","archaeology","links"],
-    s: [
-      {
-        e: "🌵", title: "home",
-        body: `<p>I write and think about technology, politics and feminism from a Latin American perspective. I'm interested in what digital systems do to bodies, archives and possibilities for collective organising.</p>
-<p>Currently in London, studying Internet Equalities at the Creative Computing Institute, UAL.</p>
-<div class="tags">
-  <span class="tag tb">AI governance</span>
-  <span class="tag tp">cyberfeminism</span>
-  <span class="tag ty">digital policy</span>
-  <span class="tag tb">Latin America</span>
-  <span class="tag tp">internet studies</span>
-</div>`
-      },
-      {
-        e: "🎨", title: "education",
-        body: `<p>
-  <span class="edu-entry"><a href="#">MA Internet Equalities</a> — Creative Computing Institute, UAL · London, 2025–2026</span>
-  <span class="edu-entry"><a href="#">Industrial Engineering &amp; Environmental Improvement Systems</a> — Universidad Panamericana · Mexico, 2017-2022</span>
-  <span class="edu-entry"><a href="#">BA Sociology</a> with a year of community engagement at the National Museum of Indigenous Peoples — UNAM · Mexico, 2018-2023</span>
-</p>`
-      },
-      {
-        e: "👁️", title: "current interests",
-        body: `<p>My current work centres on the invisibilisation of care work, particularly feminised care, and on the broader absence 
-          of a politics of care on the internet: infrastructure, protocols, databases, platforms and UX/UI. Digital colonial archives 
-          are my current site of inquiry, and I notice how this pattern repeats itself across digital systems more generally. I'm drawn 
-          to care ethics, hauntology and critical fabulation as ways of mapping the futures that have been left out and the possibilities
-          still waiting to be embraced. I like reading, writing, and building counter-archives, interactive maps and speculative interfaces.
-          I am, and stand, in cyberfeminism; internet governance matters urgently to me, as does how race, identity and visibility are constructed
-          and contested online, in general, and specifically within the Latin American context. I explore educational technology and what becomes legible or invisible when care and learning are designed within
-          an enclosed system. I buy books as a calling.</p>`
-      },
-      {
-        e: "🚥", title: "professional experience",
-        body: `<p>My path runs from startups in digital payments (the early years of fintech in Mexico) to public sector programmes in technology investment and sustainable development, to global tech. In the latter, I spent five years advising public, private and education sector institutions on the adoption, implementation and renewal of technologies as part of Microsoft LATAM. Now at the intersection of feminist technology, politics of care, and cultural memory.</p>
-<p><a href="https://www.linkedin.com/in/sbernalm97">→ full profile on LinkedIn</a></p>`
-      },
-      {
-        e: "🪑", title: "writing",
-        body: `<ul>
-  <li><a href="https://cableado.substack.com">Cableado</a> — bilingual newsletter on technology, feminist theory, politics and speculative fiction with a Latin American focus</li>
-  <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">One thousand and one nights</a> — synopsis and programme note for an adaptation of One Thousand and One Nights reimagined as a fiction between a scientist and their robots, at the Creative Computing Institute work in progress</li>
-  <li><a href="#">Short story collection of speculative fiction </a> — borders between the human and the non-human <span class="tag tb">work in progress</span></li>
-</ul>`
-      },
-      {
-        e: "🛼", title: "web project",
-        body: `<ul>
-  <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas of Care</a> — Care has historically been relegated to the domestic, the emotional, and the feminine, a conditioning that has left little room for caregiving to be recognized as a force of social reproduction. This Atlas aims to make that recognition possible.</li>
-  </ul>`
-      },
-      {
-        e: "🦴", title: "web archaeology",
-        body: `<p>Links to texts with my name spread across the web.</p>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026 </li>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026 </li>
-  <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026 </li>
-  <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
-  <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
-</ul>` 
-      },
-      {
-        e: "🪅", title: "links",
-        body: `<ul>
-  <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
-  <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
-  <li><a href="https://cableado.substack.com">substack · cableado</a></li>
-</ul>`
-      }
-    ],
-    foot: "made with html · cdmx / london"
+  // Todo el contenido ya está en el HTML; esto solo cambia de idioma.
+  function L(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-lang') !== l;
+    });
+    ['es', 'en'].forEach(function (k) {
+      var b = document.getElementById('b' + k);
+      b.classList.toggle('on', k === l);
+      b.setAttribute('aria-pressed', k === l ? 'true' : 'false');
+    });
+    try { localStorage.setItem('lang', l); } catch (e) {}
   }
-};
 
-let lang = 'es';
-
-function L(l) {
-  lang = l;
-  document.documentElement.lang = l;
-  document.getElementById('bes').classList.toggle('on', l === 'es');
-  document.getElementById('ben').classList.toggle('on', l === 'en');
-  render();
-}
-
-function render() {
-  const d = C[lang];
-
-  document.getElementById('nav').innerHTML =
-    d.nav.map(n => `<a href="#">${n}</a>`).join('');
-
-  let html = '';
-  d.s.forEach((s, i) => {
-    html += `<div class="sec">
-      <div class="sec-emoji">${s.e}</div>
-      <div class="sec-title">${s.title}</div>
-      ${s.body}
-    </div>`;
-    if (i < d.s.length - 1) {
-      html += `<div class="sec-divider">· · ·</div>`;
-    }
-  });
-
-  document.getElementById('body').innerHTML = html;
-  document.getElementById('foot').textContent = d.lang;
-  document.getElementById('foot').textContent = d.foot;
-}
-
-render();
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var browser = (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+    L(saved || browser);
+  })();
 </script>
 </body>
 </html>
