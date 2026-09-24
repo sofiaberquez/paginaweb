@@ -178,6 +178,37 @@
 
     .cv-link { font-weight: 600; }
 
+
+    /* --- CV preview + request button --- */
+    .cv-preview {
+      position: relative;
+      width: 220px;
+      max-width: 100%;
+      margin: 1.2rem 0 0.4rem;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(10, 10, 110, 0.12);
+    }
+    .cv-preview img { display: block; width: 100%; height: auto; }
+    .cv-request {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 82%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 8px 12px;
+      border-radius: 20px;
+      background: #fde0ec;
+      color: #8c2252;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(140, 34, 82, 0.2);
+    }
+    .cv-request:hover { background: #f9cfe0; }
+    .cv-note { font-size: 12px; color: #5f5850; }
+
     /* --- footer --- */
     .footer {
       margin-top: 3rem;
@@ -257,9 +288,14 @@
       <div class="sec-emoji">🚥</div>
       <h2 class="sec-title">experiencia profesional</h2>
       <p>Mi trayectoria va de startups de pagos digitales (los primeros años del fintech en México), a programas de inversión en tecnología y desarrollo sustentable en el sector público, a una empresa global de tecnología.</p>
-      <p>En Microsoft LATAM pasé cinco años gobernando acuerdos complejos de tecnología con gobiernos, universidades e instituciones financieras reguladas en México, Argentina, Uruguay y Chile, junto a equipos legales, de cumplimiento y finanzas. Ahí también cofundé el pilar indígena de los grupos de empleados de Microsoft México, con el que organicé un evento conjunto con el Museo del INPI, y fui Sustainability Champion de Microsoft México.</p>
+      <p>En Microsoft LATAM pasé cinco años gobernando acuerdos complejos de tecnología con gobiernos, universidades e instituciones financieras reguladas en México y el Cono Sur, junto a equipos legales, de cumplimiento y finanzas. Ahí también cofundé el pilar indígena de los grupos de empleados de Microsoft México, con el que organicé un evento conjunto con el Museo del INPI, y fui Sustainability Champion de Microsoft México.</p>
       <p>Ahora en el cruce entre tecnología feminista, política de cuidados y memoria cultural.</p>
       <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">descarga mi CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">perfil completo en LinkedIn</a></p>
+      <div class="cv-preview">
+        <img src="cv_preview.jpg" alt="Vista previa borrosa del CV detallado" width="520" height="734" loading="lazy">
+        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Solicitud%20de%20CV%20detallado&amp;body=Hola%20Sofia%2C%0A%0AMe%20gustar%C3%ADa%20recibir%20tu%20CV%20detallado%2C%20con%20referencias.%0A%0ANombre%3A%0AOrganizaci%C3%B3n%3A%0A">solicita mi CV detallado</a>
+      </div>
+      <p class="cv-note">La versión detallada incluye referencias y cifras completas.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
@@ -313,6 +349,7 @@
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
         <li><a href="https://cableado.substack.com">substack · cableado</a></li>
         <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
+        <li><a href="mailto:sofiaberquez@outlook.com?subject=Solicitud%20de%20CV%20detallado&amp;body=Hola%20Sofia%2C%0A%0AMe%20gustar%C3%ADa%20recibir%20tu%20CV%20detallado%2C%20con%20referencias.%0A%0ANombre%3A%0AOrganizaci%C3%B3n%3A%0A">solicita el CV detallado</a></li>
       </ul>
     </section>
 
@@ -377,9 +414,14 @@
       <div class="sec-emoji">🚥</div>
       <h2 class="sec-title">professional experience</h2>
       <p>My path runs from startups in digital payments (the early years of fintech in Mexico), to public-sector programmes in technology investment and sustainable development, to global tech.</p>
-      <p>At Microsoft LATAM I spent five years governing complex technology agreements with governments, universities and regulated financial institutions in Mexico, Argentina, Uruguay and Chile, working alongside legal, compliance and finance teams. There I also co-founded the Indigenous pillar of Microsoft Mexico's employee resource groups, through which I organised a joint event with the INPI Museum, and served as Microsoft Mexico's Sustainability Champion.</p>
+      <p>At Microsoft LATAM I spent five years governing complex technology agreements with governments, universities and regulated financial institutions in Mexico and the Southern Cone, working alongside legal, compliance and finance teams. There I also co-founded the Indigenous pillar of Microsoft Mexico's employee resource groups, through which I organised a joint event with the INPI Museum, and served as Microsoft Mexico's Sustainability Champion.</p>
       <p>Now at the intersection of feminist technology, politics of care and cultural memory.</p>
       <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">download my CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">full profile on LinkedIn</a></p>
+      <div class="cv-preview">
+        <img src="cv_preview.jpg" alt="Blurred preview of the detailed CV" width="520" height="734" loading="lazy">
+        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Detailed%20CV%20request&amp;body=Hi%20Sofia%2C%0A%0AI%27d%20like%20to%20receive%20your%20detailed%20CV%2C%20with%20references.%0A%0AName%3A%0AOrganisation%3A%0A">request my detailed CV</a>
+      </div>
+      <p class="cv-note">The detailed version includes references and full figures.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
@@ -433,6 +475,7 @@
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
         <li><a href="https://cableado.substack.com">substack · cableado</a></li>
         <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
+        <li><a href="mailto:sofiaberquez@outlook.com?subject=Detailed%20CV%20request&amp;body=Hi%20Sofia%2C%0A%0AI%27d%20like%20to%20receive%20your%20detailed%20CV%2C%20with%20references.%0A%0AName%3A%0AOrganisation%3A%0A">request the detailed CV</a></li>
       </ul>
     </section>
 
