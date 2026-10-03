@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofia Bernal (Berquez) | política digital y tecnología responsable</title>
-  <meta name="description" content="Sofia Bernal (Berquez): política digital, tecnología responsable y gobernanza de internet desde América Latina. MA Internet Equalities (UAL CCI), 5 años en Microsoft LATAM, autora de Cableado.">
+  <title>Sofia Bernal (Berquez) | gobernanza de IA y tecnología responsable</title>
+  <meta name="description" content="Sofia Bernal (Berquez): gobernanza de IA, tecnología responsable y gobernanza de internet desde América Latina. MA Internet Equalities (UAL CCI), 5 años en Microsoft LATAM, autora de Cableado.">
   <meta name="author" content="Sofia Bernal">
   <link rel="canonical" href="https://sofiaberquez.com/">
 
   <!-- vista previa al compartir el link (LinkedIn, WhatsApp, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sofiaberquez.com/">
-  <meta property="og:title" content="Sofia Bernal (Berquez) | digital policy & responsible technology">
-  <meta property="og:description" content="Digital policy, responsible technology and internet governance from Latin America. MA Internet Equalities (UAL CCI), 5 years at Microsoft LATAM, writer of Cableado.">
+  <meta property="og:title" content="Sofia Bernal (Berquez) | AI governance & responsible technology">
+  <meta property="og:description" content="AI governance, responsible technology and internet governance from Latin America. MA Internet Equalities (UAL CCI), 5 years at Microsoft LATAM, writer of Cableado.">
   <meta property="og:locale" content="es_MX">
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary">
@@ -26,7 +26,7 @@
     "alternateName": "Sofia Berquez",
     "url": "https://sofiaberquez.com/",
     "email": "mailto:sofiaberquez@outlook.com",
-    "jobTitle": "Digital policy & responsible technology",
+    "jobTitle": "AI governance & responsible technology",
     "alumniOf": ["University of the Arts London, Creative Computing Institute", "Universidad Nacional Autónoma de México", "Universidad Panamericana"],
     "sameAs": ["https://www.linkedin.com/in/sbernalm97", "https://cableado.substack.com"]
   }
@@ -174,6 +174,42 @@
     .tp { background: #fde0ec; color: #8c2252; }
     .ty { background: #fff3b0; color: #5a4700; }
 
+    /* --- dos cuadros en inicio --- */
+    .duo {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(880px, calc(100vw - 3rem));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 1.1rem 0 0.4rem;
+    }
+    .box {
+      border-radius: 14px;
+      padding: 1.3rem 1.4rem 1.2rem;
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+    }
+    .box-creative { background: rgba(255, 243, 176, 0.55); border: 1px solid rgba(230, 205, 90, 0.45); }
+    .box-ai { background: rgba(221, 232, 255, 0.62); border: 1px solid rgba(120, 150, 220, 0.35); }
+    .box-emoji { font-size: 20px; margin-bottom: 0.3rem; }
+    .box-title { font-size: 15px; font-weight: 600; color: #0a0a6e; margin-bottom: 0.6rem; }
+    .box .tags { margin-top: 0.8rem; }
+    .box-creative .tag { background: rgba(255, 255, 255, 0.6); }
+    .box-ai .tag { background: rgba(255, 255, 255, 0.6); }
+
+    @media (max-width: 720px) {
+      .duo {
+        position: static;
+        transform: none;
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+      /* en celular, gobernanza de IA aparece primero */
+      .box-ai { order: -1; }
+    }
+
     .edu-entry { display: block; margin-bottom: 0.5rem; }
 
     .cv-link { font-weight: 600; }
@@ -247,16 +283,34 @@
     <section class="sec" id="inicio">
       <div class="sec-emoji">🌵</div>
       <h2 class="sec-title">inicio</h2>
-      <p>Escribo y pienso sobre tecnología, política y feminismo desde una perspectiva latinoamericana. Me interesa lo que los sistemas digitales hacen con los cuerpos, los archivos y las posibilidades de organización colectiva.</p>
-      <p>Busco trabajar en política digital y tecnología responsable: en el cruce entre instituciones, comunidades y educación, ayudando a que la tecnología se construya a favor de las personas.</p>
       <p>Actualmente en Londres, terminando la maestría en Internet Equalities en el Creative Computing Institute, UAL. De regreso pronto a la Ciudad de México.</p>
-      <div class="tags">
-        <span class="tag tb">gobernanza de IA</span>
-        <span class="tag tp">ciberfeminismo</span>
-        <span class="tag ty">política digital</span>
-        <span class="tag tb">tecnología responsable</span>
-        <span class="tag tp">estudios de internet</span>
-        <span class="tag ty">América Latina</span>
+      <div class="duo">
+        <div class="box box-creative">
+          <div class="box-emoji" aria-hidden="true">🔮</div>
+          <h3 class="box-title">gramáticas para la web</h3>
+          <p>Un laboratorio de narrativa digital sobre cómo habitamos los sistemas técnicos y especulamos futuros posibles. Escribo y pienso sobre tecnología, política y feminismo desde una perspectiva latinoamericana: lo que los sistemas digitales hacen con los cuerpos, los archivos y la organización colectiva.</p>
+          <p>Laboratorio narrativo, diccionario, archivo y/@ gramáticas posibles.</p>
+          <div class="tags">
+            <span class="tag tp">ciberfeminismo</span>
+            <span class="tag ty">estudios de internet</span>
+            <span class="tag tp">archivos</span>
+            <span class="tag ty">cultura digital</span>
+            <span class="tag tp">América Latina</span>
+          </div>
+        </div>
+        <div class="box box-ai">
+          <div class="box-emoji" aria-hidden="true">🧭</div>
+          <h3 class="box-title">gobernanza de IA</h3>
+          <p>Ayudo a que las organizaciones adopten la IA de forma responsable, convirtiendo proveedores, riesgos y regulación en decisiones claras. Cinco años en Microsoft LATAM gobernando acuerdos complejos de tecnología con gobiernos, universidades y bancos, inicios en riesgo de pagos y una maestría en Internet Equalities.</p>
+          <p>Enfoque: gobernanza de proveedores y tecnología de IA, marcos de IA responsable (NIST AI RMF, EU AI Act), protección de datos y regulación de IA en América Latina.</p>
+          <div class="tags">
+            <span class="tag tb">gobernanza de IA</span>
+            <span class="tag tb">IA responsable</span>
+            <span class="tag tb">riesgo tecnológico</span>
+            <span class="tag tb">gobierno de proveedores</span>
+            <span class="tag tb">protección de datos</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -278,8 +332,10 @@
     <section class="sec" id="intereses">
       <div class="sec-emoji">👁️</div>
       <h2 class="sec-title">intereses actuales</h2>
-      <p class="lede">En corto: me interesa cómo lo que documentamos, describimos y catalogamos decide lo que después se puede saber y recordar de las personas, y cómo construir tecnología en nuestro interés y no para ampliar brechas sociales ni el agotamiento de la naturaleza.</p>
-      <p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, y en la ausencia más amplia de una política del cuidado en el internet: infraestructura, protocolos, bases de datos, plataformas y UX/UI. Los archivos coloniales digitales son mi sitio de indagación actual, y noto cómo este patrón se repite en los sistemas digitales generales. Me atraen la ética del cuidado, la fantología y la fabulación crítica como formas de mapear los futuros que han quedado fuera y las posibilidades pendientes de abrazar. Me gusta leer, escribir y construir contra-archivos, mapas interactivos e interfaces especulativas. Soy y estoy en el ciberfeminismo, me apremia la gobernanza de internet y el cómo se construye y disputa la raza, la identidad y la visibilidad, en general y en lo particular del contexto latinoamericano. Indago en la tecnología educativa y lo que se vuelve legible o invisible cuando el cuidado y el aprendizaje se diseñan dentro de un sistema encapsulado. Compro libros por vocación.</p>
+      <p class="lede">En corto: me interesa cómo lo que documentamos, describimos y catalogamos decide lo que después se puede saber y recordar de las personas, y construir tecnología que sirva a nuestros intereses colectivos en lugar de ampliar las brechas sociales y el agotamiento ecológico.</p>
+      <p>Pienso los sistemas digitales como memoria. Nuestras bases de datos, plataformas y carpetas de fotos son memoria guardada fuera del cuerpo, en soportes técnicos, que moldea lo que percibimos y lo que somos capaces de recordar. Quien diseña esos soportes diseña, en parte, lo que una sociedad puede recordar y lo que olvida. Por eso me importa el archivo en todas sus formas (el álbum familiar, la biblioteca personal, la fotografía colonial, la base de datos) y las voces de las personas detrás de los objetos que guardamos.</p>
+      <p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, y en la ausencia de una política del cuidado en las infraestructuras de internet: protocolos, bases de datos, plataformas e interfaces. Los archivos coloniales digitales son mi sitio de indagación actual, y veo el mismo patrón repetirse en los sistemas digitales en general. Trabajo con la ética del cuidado, los encuentros con el archivo, la fabulación crítica y lo fantasmal (el fantasma como figura sociológica, en Avery Gordon) para rastrear los futuros que quedaron fuera y las posibilidades que aún esperan ser abrazadas.</p>
+      <p>Leo, escribo y construyo contra-archivos, mapas interactivos e interfaces especulativas. Soy y estoy en el ciberfeminismo y el transhackfeminismo, con el feminismo glitch y la narrativa digital como compañías cercanas. Me apremia la gobernanza de internet, igual que la forma en que se construyen y disputan la raza, la identidad y la visibilidad en línea, en general y en América Latina en particular. También indago en la tecnología educativa y en lo que se vuelve legible o invisible cuando el cuidado y el aprendizaje se diseñan dentro de sistemas cerrados.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
@@ -343,7 +399,7 @@
     <section class="sec" id="contacto">
       <div class="sec-emoji">🪅</div>
       <h2 class="sec-title">contacto y links</h2>
-      <p>¿Trabajas en política digital, tecnología responsable o educación en América Latina? Me encantaría conversar.</p>
+      <p>¿Trabajas en gobernanza de IA, política digital, tecnología responsable o educación en América Latina? Me encantaría conversar.</p>
       <ul>
         <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
@@ -373,16 +429,34 @@
     <section class="sec" id="home">
       <div class="sec-emoji">🌵</div>
       <h2 class="sec-title">home</h2>
-      <p>I write and think about technology, politics and feminism from a Latin American perspective. I'm interested in what digital systems do to bodies, archives and possibilities for collective organising.</p>
-      <p>I'm looking to work in digital policy and responsible technology: where institutions, communities and education meet, helping technology get built in people's best interests.</p>
       <p>Currently in London, finishing an MA in Internet Equalities at the Creative Computing Institute, UAL. Heading back to Mexico City soon.</p>
-      <div class="tags">
-        <span class="tag tb">AI governance</span>
-        <span class="tag tp">cyberfeminism</span>
-        <span class="tag ty">digital policy</span>
-        <span class="tag tb">responsible technology</span>
-        <span class="tag tp">internet studies</span>
-        <span class="tag ty">Latin America</span>
+      <div class="duo">
+        <div class="box box-creative">
+          <div class="box-emoji" aria-hidden="true">🔮</div>
+          <h3 class="box-title">grammars for the web</h3>
+          <p>A digital narrative lab about how we live inside technical systems and speculate possible futures. I write and think about technology, politics and feminism from a Latin American perspective: what digital systems do to bodies, archives and collective organising.</p>
+          <p>Narrative lab, dictionary, archive and/@ possible grammars.</p>
+          <div class="tags">
+            <span class="tag tp">cyberfeminism</span>
+            <span class="tag ty">internet studies</span>
+            <span class="tag tp">archives</span>
+            <span class="tag ty">digital culture</span>
+            <span class="tag tp">Latin America</span>
+          </div>
+        </div>
+        <div class="box box-ai">
+          <div class="box-emoji" aria-hidden="true">🧭</div>
+          <h3 class="box-title">AI governance</h3>
+          <p>I help organisations adopt AI responsibly, turning vendors, risks and regulation into clear decisions. Five years at Microsoft LATAM governing complex technology agreements with governments, universities and banks, an early career in payments risk, and an MA in Internet Equalities.</p>
+          <p>Focus: AI vendor and technology governance, responsible AI frameworks (NIST AI RMF, EU AI Act), data protection and AI regulation in Latin America.</p>
+          <div class="tags">
+            <span class="tag tb">AI governance</span>
+            <span class="tag tb">responsible AI</span>
+            <span class="tag tb">technology risk</span>
+            <span class="tag tb">vendor governance</span>
+            <span class="tag tb">data protection</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -404,8 +478,10 @@
     <section class="sec" id="interests">
       <div class="sec-emoji">👁️</div>
       <h2 class="sec-title">current interests</h2>
-      <p class="lede">In short: I'm interested in how what we document, describe and catalogue decides what can later be known and remembered about people, and in building technology in our best interests rather than deepening social divides and natural depletion.</p>
-      <p>My current work centres on the invisibilisation of care work, particularly feminised care, and on the broader absence of a politics of care on the internet: infrastructure, protocols, databases, platforms and UX/UI. Digital colonial archives are my current site of inquiry, and I notice how this pattern repeats itself across digital systems more generally. I'm drawn to care ethics, hauntology and critical fabulation as ways of mapping the futures that have been left out and the possibilities still waiting to be embraced. I like reading, writing, and building counter-archives, interactive maps and speculative interfaces. I am, and stand, in cyberfeminism; internet governance matters urgently to me, as does how race, identity and visibility are constructed and contested online — in general, and specifically within the Latin American context. I explore educational technology and what becomes legible or invisible when care and learning are designed within an enclosed system. I buy books as a calling.</p>
+      <p class="lede">In short: I'm interested in how what we document, describe and catalogue decides what can later be known and remembered about people, and in building technology that serves our collective interests rather than deepening social divides and ecological depletion.</p>
+      <p>I think of digital systems as memory. Our databases, platforms and photo folders are memory held outside the body, in technical supports, that shapes what we perceive and what we are able to recall. Whoever designs those supports designs, in part, what a society can remember and what it forgets. That is why I care about the archive in all its forms (the family album, the personal library, the colonial photograph, the dataset) and about the voices of the people behind the objects we keep.</p>
+      <p>My current work centres on the invisibilisation of care work, particularly feminised care, and on the absence of a politics of care in the infrastructures of the internet: protocols, databases, platforms and interfaces. Digital colonial archives are my current site of inquiry, and I see the same pattern repeat across digital systems more broadly. I work with care ethics, archival encounters, critical fabulation and haunting (Avery Gordon's ghost as a sociological figure) to trace the futures that were left out and the possibilities still waiting to be embraced.</p>
+      <p>I read, write and build counter-archives, interactive maps and speculative interfaces. I am, and stand, in cyberfeminism and transhackfeminism, with glitch feminism and digital storytelling as close companions. Internet governance matters urgently to me, as does how race, identity and visibility are constructed and contested online, in general and within Latin America in particular. I also explore educational technology and what becomes legible or invisible when care and learning are designed within enclosed systems.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
@@ -469,7 +545,7 @@
     <section class="sec" id="contact">
       <div class="sec-emoji">🪅</div>
       <h2 class="sec-title">contact &amp; links</h2>
-      <p>Working in digital policy, responsible technology or education in Latin America? I'd love to talk.</p>
+      <p>Working in AI governance, digital policy, responsible technology or education in Latin America? I'd love to talk.</p>
       <ul>
         <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
