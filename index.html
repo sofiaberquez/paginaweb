@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofia Bernal (Berquez) | gobernanza de IA y tecnología responsable</title>
-  <meta name="description" content="Sofia Bernal (Berquez): gobernanza de IA, tecnología responsable y gobernanza de internet desde América Latina. MA Internet Equalities (UAL CCI), 5 años en Microsoft LATAM, autora de Cableado.">
+  <title>Sofia Bernal (Berquez) | gobernanza de IA y periodismo de datos</title>
+  <meta name="description" content="Sofia Bernal (Berquez): gobernanza de IA y periodismo de datos desde América Latina. 5 años en Microsoft LATAM, MA Internet Equalities (UAL CCI), autora de Cableado.">
   <meta name="author" content="Sofia Bernal">
   <link rel="canonical" href="https://sofiaberquez.com/">
 
   <!-- vista previa al compartir el link (LinkedIn, WhatsApp, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sofiaberquez.com/">
-  <meta property="og:title" content="Sofia Bernal (Berquez) | AI governance & responsible technology">
-  <meta property="og:description" content="AI governance, responsible technology and internet governance from Latin America. MA Internet Equalities (UAL CCI), 5 years at Microsoft LATAM, writer of Cableado.">
+  <meta property="og:title" content="Sofia Bernal (Berquez) | AI governance & data journalism">
+  <meta property="og:description" content="AI governance and data journalism from Latin America. 5 years at Microsoft LATAM, MA Internet Equalities (UAL CCI), writer of Cableado.">
   <meta property="og:locale" content="es_MX">
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary">
@@ -26,7 +26,7 @@
     "alternateName": "Sofia Berquez",
     "url": "https://sofiaberquez.com/",
     "email": "mailto:sofiaberquez@outlook.com",
-    "jobTitle": "AI governance & responsible technology",
+    "jobTitle": "AI governance & data journalism",
     "alumniOf": ["University of the Arts London, Creative Computing Institute", "Universidad Nacional Autónoma de México", "Universidad Panamericana"],
     "sameAs": ["https://www.linkedin.com/in/sbernalm97", "https://cableado.substack.com"]
   }
@@ -137,7 +137,7 @@
     }
 
     /* --- sections --- */
-    .sec { scroll-margin-top: 1.5rem; }
+    .sec, .box { scroll-margin-top: 1.5rem; }
 
     .sec-emoji { font-size: 22px; margin-bottom: 0.4rem; }
 
@@ -163,9 +163,9 @@
 
     ul li { margin-bottom: 0.35rem; font-size: 14px; }
 
-    ul ul { margin-top: 0.3rem; margin-bottom: 0.2rem; }
-
-    .lede { color: #0a0a6e; font-style: italic; }
+    .cat { color: #0a0a6e; font-weight: 600; }
+    .yr { color: #5f5850; font-weight: 400; }
+    .writing li { margin-bottom: 0.7rem; }
 
     /* --- tags --- */
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.9rem; }
@@ -174,7 +174,7 @@
     .tp { background: #fde0ec; color: #8c2252; }
     .ty { background: #fff3b0; color: #5a4700; }
 
-    /* --- dos cuadros en inicio --- */
+    /* --- dos cuadros al inicio --- */
     .duo {
       position: relative;
       left: 50%;
@@ -183,7 +183,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      margin: 1.1rem 0 0.4rem;
+      margin: 0 0 0.4rem;
     }
     .box {
       border-radius: 14px;
@@ -191,13 +191,12 @@
       -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
     }
-    .box-creative { background: rgba(255, 243, 176, 0.55); border: 1px solid rgba(230, 205, 90, 0.45); }
+    .box-data { background: rgba(255, 243, 176, 0.55); border: 1px solid rgba(230, 205, 90, 0.45); }
     .box-ai { background: rgba(221, 232, 255, 0.62); border: 1px solid rgba(120, 150, 220, 0.35); }
     .box-emoji { font-size: 20px; margin-bottom: 0.3rem; }
     .box-title { font-size: 15px; font-weight: 600; color: #0a0a6e; margin-bottom: 0.6rem; }
     .box .tags { margin-top: 0.8rem; }
-    .box-creative .tag { background: rgba(255, 255, 255, 0.6); }
-    .box-ai .tag { background: rgba(255, 255, 255, 0.6); }
+    .box .tag { background: rgba(255, 255, 255, 0.6); }
 
     @media (max-width: 720px) {
       .duo {
@@ -206,14 +205,9 @@
         width: 100%;
         grid-template-columns: 1fr;
       }
-      /* en celular, gobernanza de IA aparece primero */
-      .box-ai { order: -1; }
     }
 
-    .edu-entry { display: block; margin-bottom: 0.5rem; }
-
     .cv-link { font-weight: 600; }
-
 
     /* --- CV preview + request button --- */
     .cv-preview {
@@ -225,7 +219,8 @@
       overflow: hidden;
       box-shadow: 0 1px 6px rgba(10, 10, 110, 0.12);
     }
-    .cv-preview img { display: block; width: 100%; height: auto; }
+    /* imagen borrosa del CV detallado, incluida aquí mismo (no necesita archivo aparte) */
+    .cv-preview { aspect-ratio: 520 / 734; background: #fff url("data:image/jpeg;base64,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") center / cover no-repeat; }
     .cv-request {
       position: absolute;
       left: 50%;
@@ -270,39 +265,21 @@
   <div data-lang="es" lang="es">
 
     <nav aria-label="Secciones">
-      <a href="#inicio">inicio</a>
-      <a href="#educacion">educación</a>
-      <a href="#intereses">intereses</a>
-      <a href="#experiencia">experiencia</a>
-      <a href="#escritura">escritura</a>
+      <a href="#gobernanza-ia">gobernanza de IA</a>
+      <a href="#periodismo-datos">periodismo de datos</a>
+      <a href="#escritura">escritura pública</a>
       <a href="#proyectos">proyectos</a>
-      <a href="#arqueologia">arqueología</a>
-      <a href="#contacto">contacto</a>
+      <a href="#hilos">hilos</a>
+      <a href="#sobre-mi">más sobre mí</a>
     </nav>
 
-    <section class="sec" id="inicio">
-      <div class="sec-emoji">🌵</div>
-      <h2 class="sec-title">inicio</h2>
-      <p>Actualmente en Londres, terminando la maestría en Internet Equalities en el Creative Computing Institute, UAL. De regreso pronto a la Ciudad de México.</p>
+    <section class="sec" id="inicio" aria-label="Inicio">
       <div class="duo">
-        <div class="box box-creative">
-          <div class="box-emoji" aria-hidden="true">🔮</div>
-          <h3 class="box-title">gramáticas para la web</h3>
-          <p>Un laboratorio de narrativa digital sobre cómo habitamos los sistemas técnicos y especulamos futuros posibles. Escribo y pienso sobre tecnología, política y feminismo desde una perspectiva latinoamericana: lo que los sistemas digitales hacen con los cuerpos, los archivos y la organización colectiva.</p>
-          <p>Laboratorio narrativo, diccionario, archivo y/@ gramáticas posibles.</p>
-          <div class="tags">
-            <span class="tag tp">ciberfeminismo</span>
-            <span class="tag ty">estudios de internet</span>
-            <span class="tag tp">archivos</span>
-            <span class="tag ty">cultura digital</span>
-            <span class="tag tp">América Latina</span>
-          </div>
-        </div>
-        <div class="box box-ai">
-          <div class="box-emoji" aria-hidden="true">🧭</div>
-          <h3 class="box-title">gobernanza de IA</h3>
-          <p>Ayudo a que las organizaciones adopten la IA de forma responsable, convirtiendo proveedores, riesgos y regulación en decisiones claras. Cinco años en Microsoft LATAM gobernando acuerdos complejos de tecnología con gobiernos, universidades y bancos, inicios en riesgo de pagos y una maestría en Internet Equalities.</p>
-          <p>Enfoque: gobernanza de proveedores y tecnología de IA, marcos de IA responsable (NIST AI RMF, EU AI Act), protección de datos y regulación de IA en América Latina.</p>
+        <div class="box box-ai" id="gobernanza-ia">
+          <div class="box-emoji" aria-hidden="true">🪄</div>
+          <h2 class="box-title">gobernanza de IA</h2>
+          <p>Procesos, estándares y salvaguardas que ayudan a que los sistemas de IA se mantengan seguros y éticos para el sector privado y público y, sobre todo, para las personas.</p>
+          <p>Mi experiencia viene de 5 años en Microsoft, gobernando y haciendo cumplir acuerdos complejos de tecnología con gobiernos, universidades y bancos, y de un inicio de carrera en riesgo de pagos en el ecosistema de startups. Entiendo los riesgos y el potencial de las tecnologías emergentes desde el campo y a través de una maestría en Internet Equalities (Londres).</p>
           <div class="tags">
             <span class="tag tb">gobernanza de IA</span>
             <span class="tag tb">IA responsable</span>
@@ -311,101 +288,87 @@
             <span class="tag tb">protección de datos</span>
           </div>
         </div>
+        <div class="box box-data" id="periodismo-datos">
+          <div class="box-emoji" aria-hidden="true">🎐</div>
+          <h2 class="box-title">periodismo de datos</h2>
+          <p>Escribo públicamente sobre política tecnológica y cultura digital, con voz accesible para un público amplio, en mi Substack: <a href="https://cableado.substack.com">Cableado</a>, destinado a explorar las gramáticas web.</p>
+          <p>Me interesa seguir las historias de los datos a lo largo de toda la pila tecnológica (la vida secreta de los datos, las culturas públicas de datos y la vida después de los datos). Mi tesis de maestría explora la invisibilización del cuidado feminizado en archivos fotográficos coloniales y en las redes sociales contemporáneas.</p>
+          <div class="tags">
+            <span class="tag tp">periodismo de datos</span>
+            <span class="tag ty">cultura digital</span>
+            <span class="tag tp">archivos</span>
+            <span class="tag ty">ciberfeminismo</span>
+            <span class="tag tp">América Latina</span>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="educacion">
-      <div class="sec-emoji">🎨</div>
-      <h2 class="sec-title">educación y certificaciones</h2>
-      <p>
-        <span class="edu-entry"><strong>MA Internet Equalities</strong> — Creative Computing Institute, UAL · Londres, 2025–2026</span>
-        <span class="edu-entry"><strong>Ingeniería Industrial y Gestión de la Innovación</strong> — Universidad Panamericana, con intercambio en Korea University · México, 2017–2022</span>
-        <span class="edu-entry"><strong>Licenciatura en Sociología</strong> con año de vinculación comunitaria en el Museo Nacional de los Pueblos Indígenas — UNAM · México, 2018–2023</span>
-        <span class="edu-entry"><strong>Gobernanza de Internet</strong> (certificado) — Internet Society, 2026</span>
-      </p>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="intereses">
-      <div class="sec-emoji">👁️</div>
-      <h2 class="sec-title">intereses actuales</h2>
-      <p class="lede">En corto: me interesa cómo lo que documentamos, describimos y catalogamos decide lo que después se puede saber y recordar de las personas, y construir tecnología que sirva a nuestros intereses colectivos en lugar de ampliar las brechas sociales y el agotamiento ecológico.</p>
-      <p>Pienso los sistemas digitales como memoria. Nuestras bases de datos, plataformas y carpetas de fotos son memoria guardada fuera del cuerpo, en soportes técnicos, que moldea lo que percibimos y lo que somos capaces de recordar. Quien diseña esos soportes diseña, en parte, lo que una sociedad puede recordar y lo que olvida. Por eso me importa el archivo en todas sus formas (el álbum familiar, la biblioteca personal, la fotografía colonial, la base de datos) y las voces de las personas detrás de los objetos que guardamos.</p>
-      <p>Mi trabajo actual se centra en la invisibilización del trabajo de cuidado, particularmente el cuidado feminizado, y en la ausencia de una política del cuidado en las infraestructuras de internet: protocolos, bases de datos, plataformas e interfaces. Los archivos coloniales digitales son mi sitio de indagación actual, y veo el mismo patrón repetirse en los sistemas digitales en general. Trabajo con la ética del cuidado, los encuentros con el archivo, la fabulación crítica y lo fantasmal (el fantasma como figura sociológica, en Avery Gordon) para rastrear los futuros que quedaron fuera y las posibilidades que aún esperan ser abrazadas.</p>
-      <p>Leo, escribo y construyo contra-archivos, mapas interactivos e interfaces especulativas. Soy y estoy en el ciberfeminismo y el transhackfeminismo, con el feminismo glitch y la narrativa digital como compañías cercanas. Me apremia la gobernanza de internet, igual que la forma en que se construyen y disputan la raza, la identidad y la visibilidad en línea, en general y en América Latina en particular. También indago en la tecnología educativa y en lo que se vuelve legible o invisible cuando el cuidado y el aprendizaje se diseñan dentro de sistemas cerrados.</p>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="experiencia">
-      <div class="sec-emoji">🚥</div>
-      <h2 class="sec-title">experiencia profesional</h2>
-      <p>Mi trayectoria va de startups de pagos digitales (los primeros años del fintech en México), a programas de inversión en tecnología y desarrollo sustentable en el sector público, a una empresa global de tecnología.</p>
-      <p>En Microsoft LATAM pasé cinco años gobernando acuerdos complejos de tecnología con gobiernos, universidades e instituciones financieras reguladas en México y el Cono Sur, junto a equipos legales, de cumplimiento y finanzas. Ahí también cofundé el pilar indígena de los grupos de empleados de Microsoft México, con el que organicé un evento conjunto con el Museo del INPI, y fui Sustainability Champion de Microsoft México.</p>
-      <p>Ahora en el cruce entre tecnología feminista, política de cuidados y memoria cultural.</p>
-      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">descarga mi CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">perfil completo en LinkedIn</a></p>
-      <div class="cv-preview">
-        <img src="cv_preview.jpg" alt="Vista previa borrosa del CV detallado" width="520" height="734" loading="lazy">
-        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Solicitud%20de%20CV%20detallado&amp;body=Hola%20Sofia%2C%0A%0AMe%20gustar%C3%ADa%20recibir%20tu%20CV%20detallado%2C%20con%20referencias.%0A%0ANombre%3A%0AOrganizaci%C3%B3n%3A%0A">solicita mi CV detallado</a>
-      </div>
-      <p class="cv-note">La versión detallada incluye referencias y cifras completas.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
     <section class="sec" id="escritura">
-      <div class="sec-emoji">🪑</div>
-      <h2 class="sec-title">escritura</h2>
-      <ul>
-        <li><a href="https://cableado.substack.com">Cableado</a> — newsletter bilingüe sobre tecnología, ciberfeminismo, política y ficción especulativa con foco latinoamericano</li>
-        <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">Las 1 0 0 1 noches</a> — sinopsis y texto de sala para la adaptación de Las Mil y Una Noches a una ficción entre un científico y sus robots, del Creative Computing Institute</li>
-        <li>Libro de cuentos de ficción especulativa — bordes entre lo humano y lo no-humano <span class="tag tb">en proceso</span></li>
+      <div class="sec-emoji">🎏</div>
+      <h2 class="sec-title">escritura pública</h2>
+      <ul class="writing">
+        <li><span class="cat">substack blog <span class="yr">(publicando activamente)</span>:</span> <a href="https://cableado.substack.com">Cableado</a>. gramáticas para la web: un laboratorio narrativo, diccionario, archivo y/@ gramáticas posibles.</li>
+        <li><span class="cat">Las 1 0 0 1 noches <span class="yr">(2026)</span>:</span> <a href="https://hoomansamani.com/creative-robotics/creative-robotic-theatre/1001-nights-with-robots/">marco ético y booklet</a> para el performance en la 18.ª International Conference on Social Robotics (ICSR + ART 2026)</li>
+        <li><span class="cat">vida académica <span class="yr">(2025–2026)</span>:</span>
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After graduation</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/notes-from-MA-costume-2026">Notes from the UAL MA Costume Show 2026</a></li>
+        <li><span class="cat">sustentabilidad <span class="yr">(2020–2022)</span>:</span>
+          <a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a>,
+          <a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate anxiety</a>,
+          <a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a>,
+          <a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a>
+          y <a href="https://www.linkedin.com/in/sbernalm97">más en LinkedIn</a></li>
       </ul>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
     <section class="sec" id="proyectos">
-      <div class="sec-emoji">🛼</div>
-      <h2 class="sec-title">proyectos web</h2>
+      <div class="sec-emoji">🖼️</div>
+      <h2 class="sec-title">proyectos web y marcos de gobernanza de IA</h2>
       <ul>
-        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas de Cuidado</a> — El cuidado ha sido históricamente relegado a lo doméstico, lo emocional y lo femenino, un condicionamiento que ha dejado poco espacio para que el trabajo de cuidado sea reconocido como una fuerza de reproducción social. Este Atlas intenta hacer posible ese reconocimiento.</li>
-        <li>Contra-archivo del Cuidado — pequeño modelo feminista y decolonial para diseñar espacios de memoria digital que no reproduzcan la extracción archivística ni las lógicas de visibilidad de las plataformas <span class="tag tb">en proceso</span></li>
+        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas de Cuidado</a> — un contra-archivo interactivo que busca reconocer el trabajo de cuidado como una fuerza de reproducción social mezclado con la composición poética de los corridos.</li>
+        <!-- sube el PDF a la misma carpeta con este nombre (o cambia el href) -->
+        <li><a href="AI_governance_checklist_Mexico.pdf" download="Sofia_Bernal_AI_governance_checklist_Mexico.pdf">Checklist de gobernanza de IA para México</a> (PDF descargable) <span class="tag tb">en proceso</span></li>
       </ul>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
-    <section class="sec" id="arqueologia">
-      <div class="sec-emoji">🦴</div>
-      <h2 class="sec-title">arqueología web</h2>
-      <p>Hipervínculos a textos con mi nombre esparcidos por la web.</p>
-      <ul>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026</li>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026</li>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026</li>
-        <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
-      </ul>
+    <section class="sec" id="hilos">
+      <div class="sec-emoji">🧵</div>
+      <h2 class="sec-title">hilos que se conectan</h2>
+      <p>Me formé como ingeniera industrial y socióloga, encontrando un punto de interés común en las técnicas de documentación: 
+        decidir dónde termina un texto y empieza una imagen o dónde un diagrama se vuelve sonido. Me interesa cómo se registran las cosas 
+        y qué queda fuera del registro. Al inicio de mi carrera en riesgo de pagos lo vi en las transacciones que un sistema marca como confiables; 
+        en Microsoft en las cláusulas, controles y obligaciones que deciden cómo llega la tecnología a un ministerio, una universidad o un banco. 
+        En mi maestría en proyectos de auditoría para sistemas de generación de imágenes como ComfyUI identificando sesgos sobre familias 
+        latinoamericanas y en mi tesis sobre cómo la elección de categorías computacionales puede reconocer o invisibilizar ciertas historias y relaciones.</p>
+      <p>Hoy me interesa la gobernanza, que fija las reglas, estándares y salvaguardas que los sistemas deben seguir, y el periodismo de datos, 
+        que sigue lo que esos sistemas hacen con las personas, los archivos y la memoria, y lo cuenta para que cualquiera lo pueda leer. 
+        Ambos parten de la convicción de que la tecnología debe construirse en interés de las personas, y que desde América Latina tenemos intereses e historias propias que contar.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
-    <section class="sec" id="contacto">
+    <section class="sec" id="sobre-mi">
       <div class="sec-emoji">🪅</div>
-      <h2 class="sec-title">contacto y links</h2>
-      <p>¿Trabajas en gobernanza de IA, política digital, tecnología responsable o educación en América Latina? Me encantaría conversar.</p>
+      <h2 class="sec-title">más sobre mí</h2>
+      <p>Puedes ver una versión pública de mi CV, sin detalles de instituciones, cifras completas ni referencias personales. Puedes solicitar mi CV detallado para más información o, si quieres conectar, dejo abajo links a mis redes personales.</p>
+      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">descarga mi CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">perfil completo en LinkedIn</a></p>
+      <div class="cv-preview" role="img" aria-label="CV">
+        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Solicitud%20de%20CV%20detallado&amp;body=Hola%20Sofia%2C%0A%0AMe%20gustar%C3%ADa%20recibir%20tu%20CV%20detallado%2C%20con%20referencias.%0A%0ANombre%3A%0AOrganizaci%C3%B3n%3A%0A">solicita mi CV detallado</a>
+      </div>
+      <p class="cv-note">La versión detallada incluye referencias y cifras completas.</p>
       <ul>
         <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
         <li><a href="https://cableado.substack.com">substack · cableado</a></li>
-        <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
-        <li><a href="mailto:sofiaberquez@outlook.com?subject=Solicitud%20de%20CV%20detallado&amp;body=Hola%20Sofia%2C%0A%0AMe%20gustar%C3%ADa%20recibir%20tu%20CV%20detallado%2C%20con%20referencias.%0A%0ANombre%3A%0AOrganizaci%C3%B3n%3A%0A">solicita el CV detallado</a></li>
       </ul>
     </section>
 
@@ -416,39 +379,21 @@
   <div data-lang="en" lang="en" hidden>
 
     <nav aria-label="Sections">
-      <a href="#home">home</a>
-      <a href="#education">education</a>
-      <a href="#interests">interests</a>
-      <a href="#experience">experience</a>
-      <a href="#writing">writing</a>
+      <a href="#ai-governance">AI governance</a>
+      <a href="#data-journalism">data journalism</a>
+      <a href="#writing">public writing</a>
       <a href="#projects">projects</a>
-      <a href="#archaeology">archaeology</a>
-      <a href="#contact">contact</a>
+      <a href="#threads">threads</a>
+      <a href="#about">more about me</a>
     </nav>
 
-    <section class="sec" id="home">
-      <div class="sec-emoji">🌵</div>
-      <h2 class="sec-title">home</h2>
-      <p>Currently in London, finishing an MA in Internet Equalities at the Creative Computing Institute, UAL. Heading back to Mexico City soon.</p>
+    <section class="sec" id="home" aria-label="Home">
       <div class="duo">
-        <div class="box box-creative">
-          <div class="box-emoji" aria-hidden="true">🔮</div>
-          <h3 class="box-title">grammars for the web</h3>
-          <p>A digital narrative lab about how we live inside technical systems and speculate possible futures. I write and think about technology, politics and feminism from a Latin American perspective: what digital systems do to bodies, archives and collective organising.</p>
-          <p>Narrative lab, dictionary, archive and/@ possible grammars.</p>
-          <div class="tags">
-            <span class="tag tp">cyberfeminism</span>
-            <span class="tag ty">internet studies</span>
-            <span class="tag tp">archives</span>
-            <span class="tag ty">digital culture</span>
-            <span class="tag tp">Latin America</span>
-          </div>
-        </div>
-        <div class="box box-ai">
-          <div class="box-emoji" aria-hidden="true">🧭</div>
-          <h3 class="box-title">AI governance</h3>
-          <p>I help organisations adopt AI responsibly, turning vendors, risks and regulation into clear decisions. Five years at Microsoft LATAM governing complex technology agreements with governments, universities and banks, an early career in payments risk, and an MA in Internet Equalities.</p>
-          <p>Focus: AI vendor and technology governance, responsible AI frameworks (NIST AI RMF, EU AI Act), data protection and AI regulation in Latin America.</p>
+        <div class="box box-ai" id="ai-governance">
+          <div class="box-emoji" aria-hidden="true">🪄</div>
+          <h2 class="box-title">AI governance</h2>
+          <p>Processes, standards and guardrails that help ensure that AI systems stay safe and ethical for private and public sector, and most importantly: people.</p>
+          <p>My expertise comes from 5 years at Microsoft, governing and enforcing complex technology agreements with governments, universities and banks and an early career in payments risk in the startup ecosystem. I understand emerging technology risks and potentials from the field and through a master degree in Internet Equalities (London).</p>
           <div class="tags">
             <span class="tag tb">AI governance</span>
             <span class="tag tb">responsible AI</span>
@@ -457,101 +402,87 @@
             <span class="tag tb">data protection</span>
           </div>
         </div>
+        <div class="box box-data" id="data-journalism">
+          <div class="box-emoji" aria-hidden="true">🎐</div>
+          <h2 class="box-title">data journalism</h2>
+          <p>I write publicly about technology policy and digital culture in an accessible voice for a broad public through my Substack: <a href="https://cableado.substack.com">Cableado</a>, devoted to exploring web grammars.</p>
+          <p>I'm interested in following data stories throughout full stack technologies (the secret life of data, public data cultures and afterlife of data). My master thesis explores the invisibilisation of feminised care in colonial photographic archives and contemporary social media.</p>
+          <div class="tags">
+            <span class="tag tp">data journalism</span>
+            <span class="tag ty">digital culture</span>
+            <span class="tag tp">archives</span>
+            <span class="tag ty">cyberfeminism</span>
+            <span class="tag tp">Latin America</span>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="education">
-      <div class="sec-emoji">🎨</div>
-      <h2 class="sec-title">education &amp; certifications</h2>
-      <p>
-        <span class="edu-entry"><strong>MA Internet Equalities</strong> — Creative Computing Institute, UAL · London, 2025–2026</span>
-        <span class="edu-entry"><strong>BSc Industrial Engineering &amp; Innovation Management</strong> — Universidad Panamericana, with an exchange at Korea University · Mexico, 2017–2022</span>
-        <span class="edu-entry"><strong>BA Sociology</strong> with a year of community engagement at the National Museum of Indigenous Peoples — UNAM · Mexico, 2018–2023</span>
-        <span class="edu-entry"><strong>Internet Governance</strong> (certificate) — Internet Society, 2026</span>
-      </p>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="interests">
-      <div class="sec-emoji">👁️</div>
-      <h2 class="sec-title">current interests</h2>
-      <p class="lede">In short: I'm interested in how what we document, describe and catalogue decides what can later be known and remembered about people, and in building technology that serves our collective interests rather than deepening social divides and ecological depletion.</p>
-      <p>I think of digital systems as memory. Our databases, platforms and photo folders are memory held outside the body, in technical supports, that shapes what we perceive and what we are able to recall. Whoever designs those supports designs, in part, what a society can remember and what it forgets. That is why I care about the archive in all its forms (the family album, the personal library, the colonial photograph, the dataset) and about the voices of the people behind the objects we keep.</p>
-      <p>My current work centres on the invisibilisation of care work, particularly feminised care, and on the absence of a politics of care in the infrastructures of the internet: protocols, databases, platforms and interfaces. Digital colonial archives are my current site of inquiry, and I see the same pattern repeat across digital systems more broadly. I work with care ethics, archival encounters, critical fabulation and haunting (Avery Gordon's ghost as a sociological figure) to trace the futures that were left out and the possibilities still waiting to be embraced.</p>
-      <p>I read, write and build counter-archives, interactive maps and speculative interfaces. I am, and stand, in cyberfeminism and transhackfeminism, with glitch feminism and digital storytelling as close companions. Internet governance matters urgently to me, as does how race, identity and visibility are constructed and contested online, in general and within Latin America in particular. I also explore educational technology and what becomes legible or invisible when care and learning are designed within enclosed systems.</p>
-    </section>
-
-    <div class="sec-divider" aria-hidden="true">· · ·</div>
-
-    <section class="sec" id="experience">
-      <div class="sec-emoji">🚥</div>
-      <h2 class="sec-title">professional experience</h2>
-      <p>My path runs from startups in digital payments (the early years of fintech in Mexico), to public-sector programmes in technology investment and sustainable development, to global tech.</p>
-      <p>At Microsoft LATAM I spent five years governing complex technology agreements with governments, universities and regulated financial institutions in Mexico and the Southern Cone, working alongside legal, compliance and finance teams. There I also co-founded the Indigenous pillar of Microsoft Mexico's employee resource groups, through which I organised a joint event with the INPI Museum, and served as Microsoft Mexico's Sustainability Champion.</p>
-      <p>Now at the intersection of feminist technology, politics of care and cultural memory.</p>
-      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">download my CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">full profile on LinkedIn</a></p>
-      <div class="cv-preview">
-        <img src="cv_preview.jpg" alt="Blurred preview of the detailed CV" width="520" height="734" loading="lazy">
-        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Detailed%20CV%20request&amp;body=Hi%20Sofia%2C%0A%0AI%27d%20like%20to%20receive%20your%20detailed%20CV%2C%20with%20references.%0A%0AName%3A%0AOrganisation%3A%0A">request my detailed CV</a>
-      </div>
-      <p class="cv-note">The detailed version includes references and full figures.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
     <section class="sec" id="writing">
-      <div class="sec-emoji">🪑</div>
-      <h2 class="sec-title">writing</h2>
-      <ul>
-        <li><a href="https://cableado.substack.com">Cableado</a> — bilingual newsletter on technology, feminist theory, politics and speculative fiction with a Latin American focus</li>
-        <li><a href="https://www.yumpu.com/en/document/view/71242325/1-0-0-1-nights">One Thousand and One Nights</a> — synopsis and programme note for an adaptation of One Thousand and One Nights reimagined as a fiction between a scientist and their robots, at the Creative Computing Institute</li>
-        <li>Short story collection of speculative fiction — borders between the human and the non-human <span class="tag tb">work in progress</span></li>
+      <div class="sec-emoji">🎏</div>
+      <h2 class="sec-title">public writing</h2>
+      <ul class="writing">
+        <li><span class="cat">substack blog <span class="yr">(actively publishing)</span>:</span> <a href="https://cableado.substack.com">Cableado</a>. grammars for the web: how we live inside technical systems, and the futures we can still write.</li>
+        <li><span class="cat">1 0 0 1 Nights <span class="yr">(2026)</span>:</span> <a href="https://hoomansamani.com/creative-robotics/creative-robotic-theatre/1001-nights-with-robots/">ethical framework and booklet</a> for the performance at the 18th International Conference on Social Robotics (ICSR + ART 2026)</li>
+        <li><span class="cat">academic life <span class="yr">(2025–2026)</span>:</span>
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After graduation</a>,
+          <a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/notes-from-MA-costume-2026">Notes from the UAL MA Costume Show 2026</a></li>
+        <li><span class="cat">sustainability <span class="yr">(2020–2022)</span>:</span>
+          <a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a>,
+          <a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate anxiety</a>,
+          <a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a>,
+          <a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a>
+          and <a href="https://www.linkedin.com/in/sbernalm97">more on LinkedIn</a></li>
       </ul>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
     <section class="sec" id="projects">
-      <div class="sec-emoji">🛼</div>
-      <h2 class="sec-title">web projects</h2>
+      <div class="sec-emoji">🖼️</div>
+      <h2 class="sec-title">web projects and AI governance frameworks</h2>
       <ul>
-        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas of Care</a> — Care has historically been relegated to the domestic, the emotional, and the feminine, a conditioning that has left little room for caregiving to be recognized as a force of social reproduction. This Atlas aims to make that recognition possible.</li>
-        <li>Care Counter Archive — a small feminist and decolonial model for designing digital memory spaces that do not reproduce archival extraction or platform visibility logics <span class="tag tb">work in progress</span></li>
+        <li><a href="https://sofiaberquez.github.io/atlasofcare/">Atlas of Care</a> — an interactive counter-archive that seeks to recognise care work as a force of social reproduction, woven with the poetic composition of corridos.</li>
+        <!-- upload the PDF to the same folder with this name (or change the href) -->
+        <li><a href="AI_governance_checklist_Mexico.pdf" download="Sofia_Bernal_AI_governance_checklist_Mexico.pdf">AI governance checklist for Mexico</a> (downloadable PDF) <span class="tag tb">work in progress</span></li>
       </ul>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
-    <section class="sec" id="archaeology">
-      <div class="sec-emoji">🦴</div>
-      <h2 class="sec-title">web archaeology</h2>
-      <p>Links to texts with my name spread across the web.</p>
-      <ul>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/missing-the-sun">Missing the sun</a> — 02/2026</li>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/creating-space-mental-health-is-not-an-aesthetic,-it-is-a-state-of-mind">Creating space: Mental health is not an aesthetic</a> — 05/2026</li>
-        <li><a href="https://www.arts.ac.uk/study-at-ual/postgraduate-study/postgraduate-community/stories/after-graduation">After Graduation</a> — 06/2026</li>
-        <li><a href="https://www.linkedin.com/pulse/temperature-rising-social-infrastructure-sofia-bernal/">Temperature rising and social infrastructure</a> — 07/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/climate-anxiety-sofia-bernal-1c/">Climate Anxiety</a> — 06/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/zero-means-ninety-sofia-bernal/">Zero means ninety</a> — 05/2022</li>
-        <li><a href="https://www.linkedin.com/pulse/biomimicry-teachings-sofia-bernal/">Biomimicry teachings</a> — 05/2022</li>
-      </ul>
+    <section class="sec" id="threads">
+      <div class="sec-emoji">🧵</div>
+      <h2 class="sec-title">connecting threads</h2>
+      <p>I trained as an industrial engineer and a sociologist, and found common ground between the two in documentation techniques:
+        deciding where a text ends and an image begins, or where a diagram becomes sound. I'm interested in how things get recorded
+        and what gets left out of the record. Early in my career, in payments risk, I saw it in the transactions a system flags as trustworthy;
+        at Microsoft, in the clauses, controls and obligations that decide how technology reaches a ministry, a university or a bank.
+        During my MA, I saw it in audit projects on generative image systems such as ComfyUI, identifying biases in their depictions of Latin American
+        families, and in my thesis on how the choice of computational categories can recognise or erase certain stories and relationships.</p>
+      <p>Today I'm drawn to governance, which sets the rules, standards and guardrails systems must follow, and to data journalism,
+        which follows what those systems do to people, archives and memory, and tells it so anyone can read it.
+        Both start from the conviction that technology should be built in people's interest, and that from Latin America we have our own stakes and stories to tell.</p>
     </section>
 
     <div class="sec-divider" aria-hidden="true">· · ·</div>
 
-    <section class="sec" id="contact">
+    <section class="sec" id="about">
       <div class="sec-emoji">🪅</div>
-      <h2 class="sec-title">contact &amp; links</h2>
-      <p>Working in AI governance, digital policy, responsible technology or education in Latin America? I'd love to talk.</p>
+      <h2 class="sec-title">more about me</h2>
+      <p>Here you can see a public version of my CV, without institution details, full figures or personal references. You can request my detailed CV for more information or, if you'd like to connect, you'll find links to my social media below.</p>
+      <p><a class="cv-link" href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">download my CV (PDF)</a> · <a href="https://www.linkedin.com/in/sbernalm97">full profile on LinkedIn</a></p>
+      <div class="cv-preview" role="img" aria-label="CV">
+        <a class="cv-request" href="mailto:sofiaberquez@outlook.com?subject=Detailed%20CV%20request&amp;body=Hi%20Sofia%2C%0A%0AI%27d%20like%20to%20receive%20your%20detailed%20CV%2C%20with%20references.%0A%0AName%3A%0AOrganisation%3A%0A">request my detailed CV</a>
+      </div>
+      <p class="cv-note">The detailed version includes references and full figures.</p>
       <ul>
         <li><a href="mailto:sofiaberquez@outlook.com">sofiaberquez@outlook.com</a></li>
         <li><a href="https://www.linkedin.com/in/sbernalm97">linkedin</a></li>
         <li><a href="https://cableado.substack.com">substack · cableado</a></li>
-        <li><a href="Curriculum_Vitae.pdf" download="Sofia_Bernal_CV.pdf">CV (PDF)</a></li>
-        <li><a href="mailto:sofiaberquez@outlook.com?subject=Detailed%20CV%20request&amp;body=Hi%20Sofia%2C%0A%0AI%27d%20like%20to%20receive%20your%20detailed%20CV%2C%20with%20references.%0A%0AName%3A%0AOrganisation%3A%0A">request the detailed CV</a></li>
       </ul>
     </section>
 
